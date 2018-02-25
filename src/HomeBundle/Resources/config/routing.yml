@@ -1,0 +1,22 @@
+home_accueil:
+    path:     /
+    defaults: { _controller: HomeBundle:Default:index }
+
+home_login:
+    path:     /login
+    defaults: { _controller: HomeBundle:Default:login }
+
+home_register:
+    path:     /register
+    defaults: { _controller: HomeBundle:Default:register }
+
+home_formulaire:
+    path:     /formulaire
+    defaults: { _controller: HomeBundle:Default:formulaire }
+
+home_traitement_formulaire:
+    path:     /formulaire/traitement
+    defaults: { _controller: HomeBundle:Default:traitementFormulaire }
+
+
+

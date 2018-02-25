@@ -1,0 +1,126 @@
+{% extends '::base.html.twig' %}
+
+{% set menu = 'export' %}
+{% set submenu = "export" %}
+
+{% block title %}
+    Formulaire - GLADVAD
+{% endblock %}
+
+{% block body %}
+    <center>
+        <h1 class="display-1">GLADVAD</h1><br>
+        <form action="{{ path('home_traitement_formulaire') }}" method="post">
+            {{ dump(user) }}
+            <br><br>
+
+            <h4 class="display-4">Vos paramètres</h4><br>
+
+            <input type="hidden" name="user" value="{{ user.pseudo }}" >
+
+            <label>Votre INR ? :</label>
+            <input type="text" name="inr" required><br>
+
+            <label>Votre température ? :</label>
+            <input type="text" name="temperature" required><br>
+
+            <label>Votre poids ? :</label>
+            <input type="text" name="poids" required><br>
+
+            <label>Votre PAM ? :</label>
+            <input type="text" name="pam" required><br>
+
+            <label>Votre PA Systolique ? :</label>
+            <input type="text" name="pasyst" required><br>
+
+            <label>Votre PA Diastolique ? :</label>
+            <input type="text" name="padiast" required><br>
+
+            <h4 class="display-4">Evenements Récents</h4><br>
+
+            <label>Trouble de la vision ? :</label>
+            <select name="trouble-vision" required>
+                <option value="oui">OUI</option>
+                <option value="non">NON</option>
+            </select><br>
+
+            <label>Sang dans les urines ? :</label>
+            <select name="sang-urines" required>
+                <option value="oui">OUI</option>
+                <option value="non">NON</option>
+            </select><br>
+
+            <label>Sang dans les selles ? :</label>
+            <select name="sang-selles" required>
+                <option value="oui">OUI</option>
+                <option value="non">NON</option>
+            </select><br>
+
+            <label>Selles noires ? :</label>
+            <select name="selles-noires" required>
+                <option value="oui">OUI</option>
+                <option value="non">NON</option>
+            </select><br>
+
+            <label>Essoufflement au repos ? :</label>
+            <select name="essoufflement" required>
+                <option value="oui">OUI</option>
+                <option value="non">NON</option>
+            </select><br>
+
+            <h4 class="display-4">Orifice de la Drive Line</h4><br>
+
+            <label>Rouge ? :</label>
+            <select name="drv-ln-rouge" required>
+                <option value="oui">OUI</option>
+                <option value="non">NON</option>
+            </select><br>
+
+            <label>Douloureux ? :</label>
+            <select name="drv-ln-douloureux" required>
+                <option value="oui">OUI</option>
+                <option value="non">NON</option>
+            </select><br>
+
+            <label>Ecoulement ? :</label>
+            <select name="drv-ln-ecoulement" required>
+                <option value="oui">OUI</option>
+                <option value="non">NON</option>
+            </select><br>
+
+            <h4 class="display-4">Paramètre du VAD</h4><br>
+
+            <label>Flow ? :</label>
+            <select name="vad-flow" required>
+                <option value="oui">OUI</option>
+                <option value="non">NON</option>
+            </select><br>
+
+            <label>Power ? :</label>
+            <select name="vad-power" required>
+                <option value="oui">OUI</option>
+                <option value="non">NON</option>
+            </select><br>
+
+            <label>Alarmes récentes ? :</label>
+            <select name="vad-alarmes-recentes" required>
+                <option value="oui">OUI</option>
+                <option value="non">NON</option>
+            </select><br>
+
+            <h4 class="display-4">GPU</h4><br>
+
+            <label>Accepter :</label>
+            <select name="gpu-accepted" required>
+                <option value="oui">OUI</option>
+                <option value="non">NON</option>
+            </select><br><br>
+
+
+
+
+            <button type="submit" type="button" class="btn btn-warning">SUIVANT</button>
+
+        </form>
+    </center>
+{% endblock %}

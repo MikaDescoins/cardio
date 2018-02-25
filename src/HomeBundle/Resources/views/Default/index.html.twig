@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% set menu = 'export' %}
+{% set submenu = "export" %}
+
+{% block title %}
+    Accueil - GLADVAD
+{% endblock %}
+
+{% block body %}
+
+<center>
+    <h1 class="display-1">GLADVAD</h1><br>
+    <a  style="width: 200px;" href="{{ path('home_login') }}" class="badge badge-primary"><span class="display-4">GO</span></a>
+</center>
+
+{% endblock %}
