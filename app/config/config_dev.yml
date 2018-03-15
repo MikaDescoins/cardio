@@ -39,4 +39,4 @@ swiftmailer:
     auth_mode: login
     host:      node-email-1.pulsepanel.eu
     username:  noreply@mikaeldescoins.fr
-    password:  Ce07at29f
+    password:  votrepassword

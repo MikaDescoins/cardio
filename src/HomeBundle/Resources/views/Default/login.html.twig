@@ -6,14 +6,41 @@
 {% block title %}
     Accueil - GLADVAD
 {% endblock %}
-
-{% block body %}
-    <center>
-        <h1 class="display-1">GLADVAD</h1><br>
-        <form action="{{ path('home_register') }}" method="post">
-            <label>Pseudo :</label>
-            <input type="text" name="pseudo" required><br><br>
-            <button type="submit" type="button" class="btn btn-warning">SUIVANT</button>
-        </form>
-    </center>
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ asset('assets/css/mobile.css') }}" type="text/css">
 {% endblock %}
+{% block body %}
+
+    <main>
+        <div class="row">
+            <div class="col-md-12 vad-logo-div">
+                <img class="logo-vad" src="{{ asset('gladvad.svg') }}"/>
+                <p class="titre">GLAD VAD</p>
+            </div>
+        </div>
+        <form action="{{ path('home_register') }}" method="post">
+        <div class="row">
+            <div class="col-md-12 vad-text-div">
+                <p class="text-pseudo" >Pseudo</p>
+                <input class="centre champ" name="pseudo" required>
+                <p class="text2"> Le pseudo ne doit contenir ni votre nom ni votre prénom </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" type="button" class="redirection1">Suivant</button>
+            </div>
+        </div>
+        </form>
+    </main>
+
+
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+{% endblock %}
+
+

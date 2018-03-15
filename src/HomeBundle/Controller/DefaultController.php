@@ -26,8 +26,12 @@ class DefaultController extends Controller
 
     public function loginAction()
     {
+
         return $this->render('HomeBundle:Default:login.html.twig');
+
     }
+
+     
 
     public function registerAction(Request $request)
     {
@@ -94,7 +98,7 @@ class DefaultController extends Controller
             $form->setVadPower($request->get('vad-power'));
             $form->setVadAlarmesRecentes($request->get('vad-alarmes-recentes'));
 
-            $form->setGpuAccepted($request->get('gpu-accepted'));
+            $form->setGpuAccepted("oui");
 
 
             $em->persist($form);

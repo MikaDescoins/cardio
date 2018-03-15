@@ -1,52 +1,76 @@
-<h3>PSEUDO : {{ user.pseudo }}</h3>
+{% extends 'email.html.twig' %}
+
+{% block contentEmail %}
+
+    <table class="w580"  width="580" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFF">
+        <tbody>
+        <tr>
+            <td class="w580"  width="580" bgcolor="#FFF">
+                <h2 style="color:#64c2d0; font-size:22px; padding-top:12px;">COMPTE RENDU : </h2>
+                <div align="left" class="article-content">
+                    <h3>PSEUDO : {{ user.pseudo }}</h3>
 
 
-<h3>Paramètres patient : </h3>
+                    <h3>Paramètres patient : </h3>
 
-<h4>INR : {{ form.inr }}</h4>
+                    <h4>INR : {{ form.inr }}</h4>
 
-<h4>Température : {{ form.temperature }}</h4>
+                    <h4>Température : {{ form.temperature }}</h4>
 
-<h4>Poids : {{ form.poids }}</h4>
+                    <h4>Poids : {{ form.poids }}</h4>
 
-<h4>PAM : {{ form.pam }}</h4>
+                    <h4>PAM : {{ form.pam }}</h4>
 
-<h4>PA Systolique : {{ form.pasyst }}</h4>
+                    <h4>PA Systolique : {{ form.pasyst }}</h4>
 
-<h4>PA Diastolique : {{ form.padiast }}</h4>
-<br>
+                    <h4>PA Diastolique : {{ form.padiast }}</h4>
+                    <br>
 
-<h3>Evènements récents : </h3>
+                    <h3>Evènements récents : </h3>
 
-<h4>Trouble de la vision : {{ form.troubleVision }}</h4>
+                    <h4>Trouble de la vision : {{ form.troubleVision }}</h4>
 
-<h4>Sang dans les urines : {{ form.sangUrines }}</h4>
+                    <h4>Sang dans les urines : {{ form.sangUrines }}</h4>
 
-<h4>Sang dans les selles : {{ form.sangSelles }}</h4>
+                    <h4>Sang dans les selles : {{ form.sangSelles }}</h4>
 
-<h4>Selles noires : {{ form.sellesNoires }}</h4>
+                    <h4>Selles noires : {{ form.sellesNoires }}</h4>
 
-<h4>Essouflement au repos : {{ form.essoufflement }}</h4>
-<br>
+                    <h4>Essouflement au repos : {{ form.essoufflement }}</h4>
+                    <br>
 
 
 
-<h3>Orifice de la drive line : </h3>
+                    <h3>Orifice de la drive line : </h3>
 
-<h4>Rouge : {{ form.drvLnRouge }}</h4>
+                    <h4>Rouge : {{ form.drvLnRouge }}</h4>
 
-<h4>Douloureux : {{ form.drvLnDouloureux }}</h4>
+                    <h4>Douloureux : {{ form.drvLnDouloureux }}</h4>
 
-<h4>Ecoulement : {{ form.drvLnEcoulement }}</h4>
+                    <h4>Ecoulement : {{ form.drvLnEcoulement }}</h4>
 
-<br>
+                    <br>
 
-<h3>Paramètres du VAD : </h3>
+                    <h3>Paramètres du VAD : </h3>
 
-<h4>Flow : {{ form.vadFlow }}</h4>
+                    <h4>Flow : {{ form.vadFlow }}</h4>
 
-<h4>Power : {{ form.vadPower }}</h4>
+                    <h4>Power : {{ form.vadPower }}</h4>
 
-<h4>Alarmes récentes : {{ form.vadAlarmesRecentes }}</h4>
+                    <h4>Alarmes récentes : {{ form.vadAlarmesRecentes }}</h4>
 
-<br>
+                    <br>
+
+                    <p style="font-size: 12px; font-style: italic;">Cordialement,<br />
+                       L'application GLADVAD
+                    </p>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+{% endblock %}
+
+
+
